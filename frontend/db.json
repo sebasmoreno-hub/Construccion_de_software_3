@@ -1,0 +1,17 @@
+{
+  "personas": [
+    {
+      "TipoDocumento": "CC",
+      "Documento": "104122",
+      "Nombre": "SANTIAGO",
+      "Apellido": "ARREDONDO",
+      "Direccion": "CALLE 68",
+      "Ciudad": "MEDELLIN",
+      "FechaN": "03705/2026",
+      "Correo": "santiago@gmail.com",
+      "Edad": "17",
+      "id": "mDH16UydH-k"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../HTML"
+		},
+		{
+			"path": "../../../Downloads/FormularioSanti"
+		},
+		{
+			"path": "../../../Downloads/htmlForm"
+		},
+		{
+			"path": "../../../Downloads/reactMiProyecto"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Ejercicios"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FormularioSanti"
+	}
+}
