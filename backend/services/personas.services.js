@@ -1,11 +1,27 @@
-const personasModel = require('../models/personas.model');
+const Persona = require('../models/personas.models');
 
-exports.getAll = (cb) => personasModel.getAll(cb);
+exports.getAll = async () => {
+    return await Persona.findAll();
+};
 
-exports.getById = (id, cb) => personasModel.getById(id, cb);
+exports.getById = async (id) => {
+    return await Persona.findByPk(id);
+};
 
-exports.create = (persona, cb) => personasModel.create(persona, cb);
+exports.create = async (data) => {
+    return await Persona.create(data);
+};
 
-exports.update = (id, persona, cb) => personasModel.update(id, persona, cb);
+exports.update = async (id, data) => {
+    const persona = await Persona.findByPk(id);
+    if (!persona) return null;
 
-exports.delete = (id, cb) => personasModel.delete(id, cb);
+    return await persona.update(data);
+};
+
+exports.delete = async (id) => {
+    const persona = await Persona.findByPk(id);
+    if (!persona) return null;
+
+    await persona.destroy();
+};

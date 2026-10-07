@@ -1,19 +1,14 @@
-db.js (ejemplo básico)
-const sql = require('mssql');
+const { Sequelize } = require('sequelize');
 
-const config = {
-    user: 'sa',
-    password: '123456',
-    server: 'localhost',
-    database: 'demo',
-    options: {
-        encrypt: false,
-        trustServerCertificate: true
+const sequelize = new Sequelize('demo', 'sa', '123456', {
+    host: 'localhost',
+    dialect: 'mssql',
+    dialectOptions: {
+        options: {
+            encrypt: false,
+            trustServerCertificate: true
+        }
     }
-};
+});
 
-sql.connect(config)
-    .then(() => console.log('Conectado a SQL Server'))
-    .catch(err => console.log(err));
-
-module.exports = sql;
+module.exports = sequelize;
